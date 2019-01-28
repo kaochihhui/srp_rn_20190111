@@ -58,13 +58,11 @@ class Card extends React.Component {
         <View style={styles.cardItemImg}>
           <Image style={styles.profileImg} source={items_Text[0].children[0].profile_icon} />
         </View>
-        <View style={styles.cardItem}>
+        <View style={styles.cardItemText}>
           <Text style={styles.profileText}>{items_Text[0].children[0].profile_name}</Text>
-        </View>
-        <View style={styles.cardItem}>
           <Text style={styles.profileText}>{items_Text[0].children[0].leave_type}</Text>
         </View>
-        <View style={styles.cardItem}>
+        <View style={styles.cardItemCheckBox}>
           <CheckBox
             style={{ flex: 1, padding: 10 }}
             onClick={() => {
@@ -138,7 +136,6 @@ const styles = StyleSheet.create({
   },
   profileText: {
     fontSize: 20,
-    // color: '#333',
   },
   profileImg: { 
 
@@ -148,12 +145,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row', 
     alignItems: 'center', 
   },
-  cardItem:{
-        // justifyContent: 'center'
-  },
   cardItemImg:{
-    width: 50, 
-    height: 50 
+    flex:1,    
+    alignItems: 'center', 
+    justifyContent: 'center'
+  },
+  cardItemText:{
+    flex: 3, 
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    justifyContent: 'space-evenly'
+  },
+  cardItemCheckBox:{
+    flex: 1, 
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    justifyContent: 'center'
   },
   card: {
     // flexDirection: 'column',
